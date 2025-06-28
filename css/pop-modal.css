@@ -1,0 +1,86 @@
+/* #################
+pop form on reload 
+################### */
+
+/* Modal backdrop */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+
+/* Show Modal */
+.modal.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Modal box */
+.modal-content {
+    background: #fff;
+    padding: 35px;
+    width: 90%;
+    max-width: 400px;
+    /* border-radius: 10px; */
+    text-align: center;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
+}
+
+.modal-content h2 {
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 41px;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    padding: 18px 63px;
+    margin-top: 15px;
+    background-color: #E91E63;
+    color: white;
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+input {
+    padding: 21px;
+    width: 100%;
+    margin-top: 10px;
+    /* border-radius: 5px; */
+    border: 1px solid #ccc;
+}
+
+/* Simple animation */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
